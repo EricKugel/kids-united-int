@@ -1,0 +1,119 @@
+#wrapper {
+  width: 700px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+#wrapper p {
+  margin: 0;
+}
+
+#create {
+  display: block;
+  background-color: #bfcca4;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: auto;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  user-select: none;
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: black;
+}
+
+#create:hover {
+  box-shadow: 0 0 7px gray;
+  cursor: pointer;
+}
+
+.blog {
+  border: 3px dashed black;
+  margin-bottom: 25px;
+}
+
+.top {
+  background-color: #f1c391;
+  padding: 20px;
+}
+
+.personWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+#logo_large,
+#logo_large object,
+#logo_large object svg {
+  user-select: none;
+}
+
+.name {
+  font-size: 20px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #bfcca4;
+  padding: 20px;
+  gap: 25px;
+}
+
+.blogContent {
+  width: 645px;
+}
+
+.photos {
+  user-select: none;
+  display: flex;
+  gap: 20px 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube {
+  user-select: none;
+}
+
+.photo_thing {
+  height: 100px;
+}
+
+.photo_thing:hover {
+  box-shadow: 0 0 8px gray;
+  cursor: pointer;
+}
+
+.commentsPane {
+  background-color: #ff8fb2;
+  padding: 20px;
+}
+
+.commentTextArea {
+  width: 640px;
+  resize: vertical;
+  padding: 3px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment {
+  border: 1px dashed black;
+  padding: 3px;
+}
+
+.commentText {
+  margin-left: 10px;
+}

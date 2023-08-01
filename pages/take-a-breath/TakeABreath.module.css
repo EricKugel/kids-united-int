@@ -1,0 +1,18 @@
+.text {
+  height: 500px;
+  margin-top: 300px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fb427c;
+  animation: breathe 9s infinite cubic-bezier(0.65, 0.11, 0.39, 0.88);
+}
+
+@keyframes breathe {
+  50% {
+    font-size: 50px;
+  }
+  100% {
+    font-size: 40px;
+  }
+}

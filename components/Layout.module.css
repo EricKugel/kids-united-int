@@ -1,0 +1,38 @@
+.funBg {
+  margin: 0;
+  width: 100%;
+  background-color: #f6bf81;
+  animation: bgColor 20s infinite linear;
+}
+
+.plainBg {
+  background-color: #fcf7ee;
+}
+
+@keyframes bgColor {
+  33.3% {
+    background-color: #cbdfab;
+  }
+  66.6% {
+    background-color: #ff8fb2;
+  }
+  100% {
+    background-color: #f6bf81;
+  }
+}
+
+#map {
+  background-image: url("/map.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+#blobby {
+  background-image: url("/blobby.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#takeABreath {
+  background: radial-gradient(#cbdfab, #ff8fb2, #f6bf81);
+}

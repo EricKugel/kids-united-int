@@ -1,0 +1,50 @@
+.left {
+  max-width: 800px;
+}
+
+.homeWrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info {
+  background-color: #fcf7ee;
+  font-weight: bold;
+  color: #fb427c;
+  padding: 10px;
+}
+
+.leftInfo {
+  border: 5px solid #93af68;
+}
+
+.leftInfo span {
+  color: #93af68;
+}
+
+.rightInfo {
+  border: 5px solid #db9340;
+  text-align: right;
+}
+
+.rightInfo span {
+  color: #db9340;
+}
+
+.infoHeader {
+  font-size: 25px;
+  color: #dd0b4d;
+}
+
+.realHeader {
+  color: #dd0b4d;
+  font-size: 45px;
+  font-weight: bold;
+}

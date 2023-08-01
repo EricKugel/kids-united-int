@@ -5,8 +5,19 @@
     "build": "next build"
   },
   "dependencies": {
+    "@google-cloud/storage": "^6.12.0",
+    "bcryptjs": "^2.4.3",
+    "fs": "^0.0.1-security",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.4.0",
     "next": "latest",
+    "next-auth": "^4.22.3",
+    "next-google-fonts": "^2.2.0",
+    "nextjs-current-url": "^1.0.3",
+    "nodemailer": "^6.9.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.2",
+    "react-hot-toast": "^2.4.1"
   }
 }

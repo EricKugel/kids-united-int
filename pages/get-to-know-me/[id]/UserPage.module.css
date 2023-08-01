@@ -1,0 +1,71 @@
+#wrapper {
+  width: 800px;
+  border: 3px dashed black;
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+#top {
+  display: flex;
+  height: 300px;
+}
+
+#right {
+  display: flex;
+  flex-direction: column;
+  background-color: #bfcca4;
+  padding: 20px;
+  width: 500px;
+}
+
+#name {
+  font-weight: bold;
+}
+
+.editLink {
+  display: block;
+  background-color: white;
+  border: 1px solid black;
+  height: 30px;
+  border-radius: 15px;
+  padding-left: 10px;
+  width: 370px;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.editLink:hover {
+  cursor: pointer;
+  box-shadow: 0 0 7px gray;
+}
+
+#bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f1c391;
+  gap: 3px;
+}
+
+.contact {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 3px;
+  background: white;
+  padding-left: 10px;
+  width: 370px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
