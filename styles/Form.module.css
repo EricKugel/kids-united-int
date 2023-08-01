@@ -1,0 +1,118 @@
+.google {
+  margin: auto;
+  width: 260px;
+  height: 35px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 17px;
+  justify-content: center;
+}
+
+.google:hover {
+  cursor: pointer;
+  box-shadow: 0 0 7px gray;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.formHeader {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.formWrapper {
+  margin: auto;
+  margin-top: 200px;
+  margin-bottom: 300px;
+  width: 300px;
+  padding: 20px;
+  background-color: #ffedce;
+  border-radius: 10px;
+}
+
+.largeFormWrapper {
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  width: 500px;
+  padding: 20px;
+  background-color: #ffedce;
+  border-radius: 10px;
+}
+
+.label {
+  font-size: 12px;
+}
+
+.input {
+  width: 480px;
+  height: 20px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.smallInput {
+  width: 480px;
+  height: 15px;
+  padding: 2px;
+  font-size: 13px;
+}
+
+.textarea {
+  width: 480px;
+  height: 200px;
+  padding: 5px;
+  resize: none;
+}
+
+.smallTextarea {
+  width: 480px;
+  height: 100px;
+  padding: 5px;
+  resize: none;
+}
+
+.littleTinyBottomText {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 12px;
+  width: 300px;
+}
+
+.submit {
+  background-color: #93af68;
+  width: 100px;
+  height: 30px;
+  margin: auto;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.submit:hover {
+  cursor: pointer;
+  box-shadow: 0 0 7px gray;
+}
+
+.space {
+  margin-bottom: 10px;
+}
+
+.inline {
+  display: flex;
+  gap: 10px;
+}
+
+.inlineInput {
+  width: 150px;
+}
