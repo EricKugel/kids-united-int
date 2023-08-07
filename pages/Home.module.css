@@ -48,3 +48,50 @@
   font-size: 45px;
   font-weight: bold;
 }
+
+.meetWrapper {
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+
+.meetHeading {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.directors {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.director {
+  font-size: 14px;
+  display: block;
+  color: black;
+  text-decoration: none;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.director:hover {
+  box-shadow: 0 0 7px gray;
+  cursor: pointer;
+}
+
+.directorTop {
+  height: 200px;
+}
+
+.directorBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1c391;
+  padding: 10px;
+}
+
+.name {
+  font-size: 20px;
+}

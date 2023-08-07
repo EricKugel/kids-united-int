@@ -2,11 +2,17 @@ import { useSession } from "next-auth/react";
 
 import styles from "./Home.module.css";
 import { Poppins } from "next/font/google";
+
+import { connectDB } from "../helpers/mongohelper";
+import User from "../models/user";
+
+import Link from "next/link";
+
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
-const Home = () => {
+const Home = ({ admins }) => {
   return (
-    <>
-      <div className={styles.homeWrapper + " " + poppins.className}>
+    <div className={poppins.className}>
+      <div className={styles.homeWrapper}>
         <div className={styles.left}>
           <div className={styles.logoWrapper}>
             <object id={styles.logoImageLarge} data="/logo.svg" />
@@ -92,13 +98,51 @@ const Home = () => {
                 margin: "0px 0px 12px",
                 minWidth: "326px",
                 padding: "0px",
+                maxHeight: "750px",
               }}
             ></iframe>
           </div>
         </div>
       </div>
-    </>
+      <div className={styles.meetWrapper}>
+        <div className={styles.meetHeading}>Meet Our Directors</div>
+        <div className={styles.directors}>
+          {admins &&
+            admins.map((admin) => (
+              <Link
+                key={admin._id}
+                className={styles.director}
+                href={"/get-to-know-me/" + admin._id}
+              >
+                <div className={styles.directorTop}>
+                  <img width="200px" height="200px" src={admin.image} />
+                </div>
+                <div className={styles.directorBottom}>
+                  <div className={styles.name}>{admin.userName}</div>
+                  <div className={styles.title}>{admin.title}</div>
+                  <div className={styles.email}>{admin.email}</div>
+                </div>
+              </Link>
+            ))}
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default Home;
+
+export const getServerSideProps = async () => {
+  try {
+    await connectDB();
+    return {
+      props: {
+        admins: JSON.parse(
+          JSON.stringify(await User.find({ admin: true }).lean())
+        ),
+      },
+    };
+  } catch (e) {
+    console.error(e);
+  }
+};
