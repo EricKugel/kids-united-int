@@ -8,7 +8,8 @@ export default async function handler(req, res) {
       projectId: process.env.PROJECT_ID,
       credentials: {
         client_email: process.env.CLIENT_EMAIL,
-        private_key: process.env.PRIVATE_KEY,
+        // kids, don't try this at home
+        private_key: process.env.PRIVATE_KEY.split(String.raw`\n`).join("\n"),
       },
     });
 
