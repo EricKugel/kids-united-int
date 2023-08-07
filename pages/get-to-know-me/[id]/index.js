@@ -1,6 +1,6 @@
 import { connectDB } from "../../../helpers/mongohelper";
 import User from "../../../models/user";
-import { useSession } from "next-auth/react";
+import { useSession, getSession } from "next-auth/react";
 
 import styles from "./UserPage.module.css";
 
@@ -72,12 +72,22 @@ const UserPage = ({ user }) => {
 };
 
 export const getServerSideProps = async (context) => {
+  const session = await getSession(context);
   try {
     await connectDB();
     const user = JSON.parse(
       JSON.stringify(await User.findById(context.query.id).lean())
     );
-    return { props: { user } };
+    if (session || user.admin) {
+      return { props: { user } };
+    } else {
+      return {
+        redirect: {
+          destination: "/login",
+          permanent: false,
+        },
+      };
+    }
   } catch (e) {
     console.error(e);
   }
