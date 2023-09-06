@@ -78,7 +78,7 @@ const Home = ({ admins }) => {
             <div className={styles.realHeader}>
               In case you missed
               <br />
-              <div style={{ marginLeft: "40px" }}>today's post..</div>
+              <div style={{ marginLeft: "40px" }}>today's post...</div>
               <br />
             </div>
             <iframe

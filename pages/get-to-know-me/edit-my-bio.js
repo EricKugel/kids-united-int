@@ -154,7 +154,7 @@ const EditMyBio = ({ user }) => {
           </div>
           <br />
           <button className={styles.submit} type="submit">
-            Submit
+            Done!
           </button>
         </form>
       </div>
