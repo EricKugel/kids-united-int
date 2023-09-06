@@ -1,5 +1,7 @@
 import { useSession } from "next-auth/react";
 
+import findDimensions from "../helpers/hooks/dimensions";
+
 import styles from "./Home.module.css";
 import { Poppins } from "next/font/google";
 
@@ -10,6 +12,7 @@ import Link from "next/link";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "600" });
 const Home = ({ admins }) => {
+  const { width, height } = findDimensions();
   return (
     <div className={poppins.className}>
       <div className={styles.homeWrapper}>
@@ -79,27 +82,11 @@ const Home = ({ admins }) => {
               <br />
             </div>
             <iframe
-              class="instagram-media instagram-media-rendered"
-              id="instagram-embed-0"
-              src="https://www.instagram.com/p/CuXCl3GryIM/embed/?cr=1&amp;v=14&amp;wp=598&amp;rd=https%3A%2F%2Fcdn.iframe.ly&amp;rp=%2Fapi%2Fiframe%3Fapp%3D1%26url%3Dhttps%253A%252F%252Fwww.instagram.com%252Fp%252FCuXCl3GryIM%252F%253Fimg_index%253D1%26key%3D462812a26b593f2dbfbfcbb14f6d699a#%7B%22ci%22%3A0%2C%22os%22%3A133.5%2C%22ls%22%3A129.79999995231628%2C%22le%22%3A129.79999995231628%7D"
+              src="https://www.instagram.com/p/CwIphPGrMNa/embed"
+              width="500"
+              height="850"
               allowtransparency="true"
-              allowfullscreen="true"
-              frameborder="0"
-              height="955"
-              data-instgrm-payload-id="instagram-media-payload-0"
-              style={{
-                backgroundColor: "white",
-                maxWidth: "658px",
-                width: "calc(100% - 2px)",
-                borderRadius: "3px",
-                border: "1px solid rgb(219, 219, 219)",
-                boxShadow: "none",
-                display: "block",
-                margin: "0px 0px 12px",
-                minWidth: "326px",
-                padding: "0px",
-                maxHeight: "750px",
-              }}
+              style={{ border: "0" }}
             ></iframe>
           </div>
         </div>
@@ -115,7 +102,7 @@ const Home = ({ admins }) => {
                 href={"/get-to-know-me/" + admin._id}
               >
                 <div className={styles.directorTop}>
-                  <img width="200px" height="200px" src={admin.image} />
+                  <img width="230px" height="230px" src={admin.image} />
                 </div>
                 <div className={styles.directorBottom}>
                   <div className={styles.name}>{admin.userName}</div>

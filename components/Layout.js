@@ -4,8 +4,12 @@ import Footer from "./Footer";
 
 import styles from "./Layout.module.css";
 
+import isMobile from "../helpers/hooks/dimensions";
+
 import { withRouter } from "next/router";
 const Layout = ({ router, children }) => {
+  const mobile = isMobile();
+
   const map =
     router.pathname.startsWith("/get-to-know-me") ||
     router.pathname.startsWith("/blog");
@@ -13,17 +17,34 @@ const Layout = ({ router, children }) => {
   const blobby = !(map || takeABreath);
   return (
     <>
-      <div className={map ? styles.funBg : styles.plainBg}>
-        <div
-          id={map ? styles.map : blobby ? styles.blobby : styles.takeABreath}
-        >
+      <div
+        className={
+          map
+            ? mobile
+              ? styles.plainBg
+              : styles.funBg
+            : styles.plainBg + " " + styles.wholePageWrapper
+        }
+      >
+        <div>
           <Head>
             <title>Kids United Int</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
 
           <Banner />
-          <div id="main">
+          <div
+            id="main"
+            className={
+              map
+                ? mobile
+                  ? ""
+                  : styles.map
+                : blobby
+                ? styles.blobby
+                : styles.takeABreath
+            }
+          >
             <div className="contentPane">
               <main>{children}</main>
             </div>

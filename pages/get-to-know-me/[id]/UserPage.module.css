@@ -2,15 +2,33 @@
   width: 800px;
   border: 3px dashed black;
   margin: auto;
-  margin-top: 200px;
-  margin-bottom: 200px;
   display: flex;
   flex-direction: column;
+}
+
+#pageWrapper {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 #top {
   display: flex;
   height: 300px;
+}
+
+#mobileWrapper {
+  width: 380px;
+  margin: auto;
+  border: 2px dashed black;
+  padding: 0;
+  background-color: #bfcca4;
+}
+
+#mobileRight {
+  display: flex;
+  flex-direction: column;
+  background-color: #bfcca4;
+  padding: 20px;
 }
 
 #right {

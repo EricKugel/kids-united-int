@@ -61,7 +61,7 @@ const Create = () => {
   };
 
   return (
-    <>
+    <div className={styles.formPageWrapper}>
       <div className={styles.largeFormWrapper}>
         <div className={styles.formHeader}>Create a blog post</div>
         <b>Upload images (optional)</b>
@@ -105,7 +105,7 @@ const Create = () => {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

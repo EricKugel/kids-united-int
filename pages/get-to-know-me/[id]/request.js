@@ -31,7 +31,7 @@ const Request = ({ emailTo, emailFrom, userName }) => {
   };
 
   return (
-    <>
+    <div className={styles.formPageWrapper}>
       <div className={styles.largeFormWrapper}>
         <div className={styles.formHeader}>
           Schedule a meeting with {userName}
@@ -68,7 +68,7 @@ const Request = ({ emailTo, emailFrom, userName }) => {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

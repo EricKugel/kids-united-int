@@ -47,7 +47,7 @@ const Register = () => {
     }
   };
   return (
-    <div className={poppins.className}>
+    <div className={poppins.className + " " + styles.formPageWrapper}>
       <div className={styles.formWrapper}>
         <div className={styles.formHeader}>Sign up</div>
         <div className={styles.google} onClick={() => signIn("google")}>

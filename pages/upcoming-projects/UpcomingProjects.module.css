@@ -1,0 +1,58 @@
+.wrapper {
+  padding: 50px;
+  min-width: 500px;
+}
+
+.header {
+  font-size: 100px;
+  color: #dd0b4d;
+}
+
+.info {
+  font-weight: bold;
+  color: #fb427c;
+}
+
+.infoWrapper {
+  border: 5px solid #93af68;
+  background-color: #fcf7ee;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.infoHeader {
+  font-size: 25px;
+  color: #fb427c;
+}
+
+.right {
+  text-align: right;
+}
+
+.gallery {
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 20px;
+}
+
+.galleryPhoto {
+  width: 300px;
+  height: auto;
+  border: solid white;
+  border-width: 15px 20px 15px 20px;
+  box-shadow: 0 0 15px gray;
+}
+
+.vertical {
+  border-width: 20px 15px 20px 15px;
+}
+
+.galleryPhoto:hover {
+  rotate: 2deg;
+  cursor: pointer;
+}

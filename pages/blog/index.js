@@ -20,8 +20,8 @@ const BlogPosts = ({ blogs }) => {
     const match = url.match(r);
     return (
       <iframe
-        width="640"
-        height="480"
+        maxWidth="640"
+        maxHeight="480"
         src={"//www.youtube.com/embed/" + match[2]}
         allowFullScreen
       ></iframe>

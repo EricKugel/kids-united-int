@@ -68,7 +68,7 @@ const EditMyBio = ({ user }) => {
   };
 
   return (
-    <>
+    <div className={styles.formPageWrapper}>
       <div className={styles.largeFormWrapper}>
         <div className={styles.formHeader}>Edit My Bio</div>
         <input
@@ -158,7 +158,7 @@ const EditMyBio = ({ user }) => {
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

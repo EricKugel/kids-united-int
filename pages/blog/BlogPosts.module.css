@@ -1,8 +1,8 @@
 #wrapper {
-  width: 700px;
+  max-width: 700px;
   margin: auto;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  padding-top: 50px;
+  padding-bottom: 25px;
 }
 
 #wrapper p {
@@ -67,7 +67,7 @@
 }
 
 .blogContent {
-  width: 645px;
+  max-width: 645px;
 }
 
 .photos {
@@ -98,7 +98,7 @@
 }
 
 .commentTextArea {
-  width: 640px;
+  max-width: 640px;
   resize: vertical;
   padding: 3px;
 }

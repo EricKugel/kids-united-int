@@ -1,7 +1,6 @@
 #header {
   background-color: #ffedce;
   width: 100%;
-  height: 90px;
 }
 
 #logo,
@@ -33,4 +32,25 @@
 .nav_link:hover {
   background-color: #db9340;
   color: #ffedce;
+}
+
+.barsIcon {
+  margin: 30px;
+  width: 30px;
+  height: auto;
+}
+
+.dropDownLink {
+  display: block;
+  cursor: pointer;
+  height: 50px;
+  text-decoration: none;
+  background-color: #ffedce;
+  line-height: 50px;
+  color: black;
+  padding-left: 20px;
+}
+
+.dropDownLinks {
+  padding-bottom: 10px;
 }

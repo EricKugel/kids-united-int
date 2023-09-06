@@ -6,7 +6,10 @@ import styles from "./UserPage.module.css";
 
 import Link from "next/link";
 
+import isMobile from "../../../helpers/hooks/dimensions";
+
 const UserPage = ({ user }) => {
+  const mobile = isMobile();
   const session = useSession();
 
   const contact = (method) => {
@@ -20,53 +23,111 @@ const UserPage = ({ user }) => {
 
   return (
     <>
-      <div id={styles.wrapper}>
-        <div id={styles.top}>
-          <div id={styles.left}>
-            <img width="300px" height="300px" src={user?.image} />
-          </div>
-          <div id={styles.right}>
-            <div>
-              <span id={styles.name}>{user.userName}</span>, {user.email}
+      {mobile ? (
+        <div style={{ paddingTop: "40px", paddingBottom: "40px" }}>
+          <div id={styles.mobileWrapper}>
+            <div id={styles.mobileLeft}>
+              <img width="380px" height="380px" src={user?.image} />
             </div>
-            <div>
-              {user.admin ? (
-                <span style={{ color: "red" }}>{user.title}</span>
+            <div id={styles.mobileRight}>
+              <div>
+                <span id={styles.name}>{user.userName}</span>, {user.email}
+              </div>
+              <div>
+                {user.admin ? (
+                  <span style={{ color: "red" }}>{user.title}</span>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div id={styles.country}>{user.country}</div>
+              <div id={styles.pronouns}>{user.pronouns}</div>
+              <hr />
+              <div
+                style={{ height: "200px", overflowY: "auto" }}
+                id={styles.bio}
+              >
+                {user.bio}
+              </div>
+            </div>
+            <div id={styles.mobileBottom}>
+              {user.phone ? contact("phone") : ""}
+              {user.ig ? contact("ig") : ""}
+              {user.snap ? contact("snap") : ""}
+              <div className={styles.contact}>
+                <img src={"/zoom.png"} className={styles.icon} />
+                <Link href={"/get-to-know-me/" + user._id + "/request"}>
+                  Schedule a zoom meeting with {user.userName}
+                </Link>
+              </div>
+
+              {session?.data?.user?.email == user.email ? (
+                <Link
+                  href="/get-to-know-me/edit-my-bio"
+                  className={styles.editLink}
+                >
+                  <b>Edit my bio</b>
+                </Link>
               ) : (
                 ""
               )}
             </div>
-            <div id={styles.country}>{user.country}</div>
-            <div id={styles.pronouns}>{user.pronouns}</div>
-            <hr />
-            <div style={{ height: "200px", overflowY: "auto" }} id={styles.bio}>
-              {user.bio}
+          </div>
+        </div>
+      ) : (
+        <div id={styles.pageWrapper}>
+          <div id={styles.wrapper}>
+            <div id={styles.top}>
+              <div id={styles.left}>
+                <img width="300px" height="300px" src={user?.image} />
+              </div>
+              <div id={styles.right}>
+                <div>
+                  <span id={styles.name}>{user.userName}</span>, {user.email}
+                </div>
+                <div>
+                  {user.admin ? (
+                    <span style={{ color: "red" }}>{user.title}</span>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                <div id={styles.country}>{user.country}</div>
+                <div id={styles.pronouns}>{user.pronouns}</div>
+                <hr />
+                <div
+                  style={{ height: "200px", overflowY: "auto" }}
+                  id={styles.bio}
+                >
+                  {user.bio}
+                </div>
+              </div>
+            </div>
+            <div id={styles.bottom}>
+              {user.phone ? contact("phone") : ""}
+              {user.ig ? contact("ig") : ""}
+              {user.snap ? contact("snap") : ""}
+              <div className={styles.contact}>
+                <img src={"/zoom.png"} className={styles.icon} />
+                <Link href={"/get-to-know-me/" + user._id + "/request"}>
+                  Schedule a zoom meeting with {user.userName}
+                </Link>
+              </div>
+
+              {session?.data?.user?.email == user.email ? (
+                <Link
+                  href="/get-to-know-me/edit-my-bio"
+                  className={styles.editLink}
+                >
+                  <b>Edit my bio</b>
+                </Link>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>
-        <div id={styles.bottom}>
-          {user.phone ? contact("phone") : ""}
-          {user.ig ? contact("ig") : ""}
-          {user.snap ? contact("snap") : ""}
-          <div className={styles.contact}>
-            <img src={"/zoom.png"} className={styles.icon} />
-            <Link href={"/get-to-know-me/" + user._id + "/request"}>
-              Schedule a zoom meeting with {user.userName}
-            </Link>
-          </div>
-
-          {session?.data?.user?.email == user.email ? (
-            <Link
-              href="/get-to-know-me/edit-my-bio"
-              className={styles.editLink}
-            >
-              <b>Edit my bio</b>
-            </Link>
-          ) : (
-            ""
-          )}
-        </div>
-      </div>
+      )}
     </>
   );
 };
