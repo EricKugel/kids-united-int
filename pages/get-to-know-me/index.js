@@ -6,7 +6,10 @@ import { getSession } from "next-auth/react";
 
 import styles from "./GetToKnowMe.module.css";
 
-const GetToKnowMe = ({ users, email }) => {
+import { Poppins } from "next/font/google";
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+
+const GetToKnowMe = ({ users, email, count }) => {
   return (
     <>
       <div className={styles.users}>
@@ -34,9 +37,14 @@ const GetToKnowMe = ({ users, email }) => {
           </Link>
         ))}
       </div>
-      {[...Array(30).keys()].map((value) => (
-        <br key="value" />
-      ))}
+      <br />
+      <br />
+      <div id={styles.count} className={poppins.className}>
+        {count} members!
+      </div>
+      <br />
+      <br />
+      <br />
     </>
   );
 };
@@ -48,13 +56,20 @@ export const getServerSideProps = async (context) => {
       await connectDB();
       const email = session.user.email;
       const otherUsers = JSON.parse(
-        JSON.stringify(await User.find({ email: { $ne: email } }).lean())
+        JSON.stringify(
+          await User.find({ email: { $ne: email } })
+            .collation({ locale: "en" })
+            .sort({ admin: -1, userName: 1 })
+            .lean()
+        )
       );
       const myUser = JSON.parse(
         JSON.stringify(await User.findOne({ email }).lean())
       );
       otherUsers.splice(0, 0, myUser);
-      return { props: { users: otherUsers, email } };
+
+      const count = await User.count();
+      return { props: { users: otherUsers, email, count } };
     } catch (e) {
       console.error(e);
     }

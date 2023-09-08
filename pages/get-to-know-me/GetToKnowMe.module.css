@@ -40,3 +40,10 @@
 .blob2 {
   background-image: url("/blob2.png");
 }
+
+#count {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #dd0b4d;
+}
