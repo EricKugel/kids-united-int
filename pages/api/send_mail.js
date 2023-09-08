@@ -20,10 +20,10 @@ export default async function handler(req, res) {
       const allUsers = JSON.parse(JSON.stringify(await User.find({}).lean()));
 
       var allEmails = [];
-      // allUsers.map((user) => {
-      //   allEmails.push(user.email);
-      // });
-      allEmails = ["erickugel713@gmail.com", "7886601@rochesterschools.org"];
+      allUsers.map((user) => {
+        allEmails.push(user.email);
+      });
+      //   allEmails = ["erickugel713@gmail.com", "7886601@rochesterschools.org"];
 
       sendMail(allEmails, subject, html, html);
       res.status(200).json({ message: "Success!" });
