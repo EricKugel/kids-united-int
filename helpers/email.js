@@ -10,10 +10,11 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export const sendMail = (to, subject, text, html) => {
+export const sendMail = (to, subject, text, html, bcc = []) => {
   const message = {
     from: "Kids United Int <kidsunitedint@gmail.com>",
     to: to.join(", "),
+    bcc,
     subject,
     text,
     html,
