@@ -21,6 +21,23 @@ const Email = ({ email }) => {
     setEditorLoaded(true);
   }, []);
 
+  const handleClick = async () => {
+    fetch("/api/send_mail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ subject, html: data }),
+    }).then((response) => {
+      if (response.ok) {
+        toast.success("Email sent!");
+        router.push("/");
+      } else {
+        toast.error("Something went wrong");
+      }
+    });
+  };
+
   return (
     <>
       <Editor
@@ -38,26 +55,7 @@ const Email = ({ email }) => {
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
         ></input>
-        <button
-          onClick={() => {
-            fetch("/api/send_mail", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({ subject, html: data }),
-            }).then((response) => {
-              if (response.ok) {
-                toast.success("Email sent!");
-                router.push("/");
-              } else {
-                toast.error("Something went wrong");
-              }
-            });
-          }}
-        >
-          Send!
-        </button>
+        <button onClick={handleClick}>Send!</button>
       </form>
 
       {/* {JSON.stringify(data)} */}

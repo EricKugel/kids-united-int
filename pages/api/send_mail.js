@@ -25,13 +25,7 @@ export default async function handler(req, res) {
       });
       //   allEmails = ["erickugel713@gmail.com", "7886601@rochesterschools.org"];
 
-      sendMail(
-        ["info@kidsunitedint.org"],
-        subject,
-        html,
-        html,
-        (bcc = allEmails)
-      );
+      sendMail(["info@kidsunitedint.org"], subject, html, html, allEmails);
       res.status(200).json({ message: "Success!" });
     } else {
       res.status(401).json({ message: "Not authorized" });

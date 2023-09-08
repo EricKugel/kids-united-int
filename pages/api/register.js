@@ -59,7 +59,8 @@ Even the smallest actions can create ripples of change. We're eagerly anticipati
 Best,<br/>
 Kids United International
 
-      `
+      `,
+      []
     );
     res.status(200).json({ user });
   }
