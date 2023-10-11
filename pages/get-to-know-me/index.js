@@ -11,7 +11,10 @@ const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 const GetToKnowMe = ({ users, email, count }) => {
   return (
-    <>
+    <div className = {styles.bigWrapper}>
+      <div className = {styles.message + " " + poppins.className}> 
+        In need of mental health support, homework help, or simply want to connect with youth around the world? Click on their bios and request a video call!
+      </div>
       <div className={styles.users}>
         {users.map((user) => (
           <Link
@@ -45,7 +48,7 @@ const GetToKnowMe = ({ users, email, count }) => {
       <br />
       <br />
       <br />
-    </>
+    </div>
   );
 };
 

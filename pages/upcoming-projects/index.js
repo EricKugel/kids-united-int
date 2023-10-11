@@ -66,7 +66,7 @@ const UpcomingProjects = () => {
           marginTop: "50px",
         }}
       >
-        Upcoming Projects
+        Recently Started
       </div>
 
       <div className={styles.infoWrapper}>

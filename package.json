@@ -17,7 +17,7 @@
     "fs": "^0.0.1-security",
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.0",
-    "next": "latest",
+    "next": "^13.5.4",
     "next-auth": "^4.22.3",
     "next-google-fonts": "^2.2.0",
     "nextjs-current-url": "^1.0.3",

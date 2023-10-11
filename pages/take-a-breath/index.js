@@ -7,9 +7,9 @@ const TakeABreath = () => {
   return (
     <>
       <div className={styles.text + " " + poppins.className}>
-        There's nothing here yet.
+        This page isn't quite ready yet.
         <br />
-        For now, just take some deep breaths.
+        For now, practice taking some deep breaths.
       </div>
     </>
   );
