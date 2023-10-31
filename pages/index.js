@@ -82,7 +82,7 @@ const Home = ({ admins }) => {
               <br />
             </div>
             <iframe
-              src="https://www.instagram.com/p/CwIphPGrMNa/embed"
+              src="https://www.instagram.com/p/Cy5I0RJuaus/embed"
               width="500"
               height="850"
               allowtransparency="true"
