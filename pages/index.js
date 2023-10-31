@@ -67,7 +67,7 @@ const Home = ({ admins }) => {
                 <span>fascinating</span> insights into users' daily lives,
                 passions, and their countries. Don't forget to stay updated on
                 our latest and upcoming projects to learn how you can contribute
-                to help making a difference by referencing the Upcoming Projects
+                to help making a difference by referencing the Projects
                 tab.
               </div>
             </div>

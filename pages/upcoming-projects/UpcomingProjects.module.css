@@ -20,6 +20,14 @@
   margin-bottom: 20px;
 }
 
+.letterWrapper {
+  background-color: #e4d5b7;
+  max-width: 500px;
+  padding: 20px;
+  border: 5px dashed black;
+  margin: auto;
+}
+
 .infoHeader {
   font-size: 25px;
   color: #fb427c;
