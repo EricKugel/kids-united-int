@@ -40,6 +40,9 @@ const Banner = () => {
               className={styles.dropDownLinks}
               style={{ display: showBars ? "block" : "none" }}
             >
+              <Link href="/donate" className={styles.dropDownLink + " " + styles.specialDropDownLink}>
+                <div className={styles.special_nav_link_text}>Donate</div>
+              </Link>
               <Link href="/" className={styles.dropDownLink}>
                 <div className={styles.nav_link_text}>About Us</div>
               </Link>
@@ -59,6 +62,9 @@ const Banner = () => {
           </div>
         ) : (
           <nav id={styles.nav} className={poppins.className}>
+            <Link href="/donate" className={styles.special_nav_link}>
+              <div className={styles.nav_link_text}>Donate</div>
+            </Link>
             <Link href="/" className={styles.nav_link}>
               <div className={styles.nav_link_text}>About Us</div>
             </Link>

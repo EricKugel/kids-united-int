@@ -29,9 +29,29 @@
   color: black;
 }
 
+.special_nav_link {
+  display: block;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #db9340;
+  line-height: 50px;
+  margin-top: 20px;
+  color: black;
+  border-radius: 50px;
+  margin-right: 20px;
+  border: 1px solid #db9340;
+}
+
 .nav_link:hover {
   background-color: #db9340;
   color: #ffedce;
+}
+
+.special_nav_link:hover {
+  border: 1px solid black;
 }
 
 .barsIcon {
@@ -50,6 +70,15 @@
   color: black;
   padding-left: 20px;
 }
+
+.specialDropDownLink {
+  background-color: #ffedce;
+  line-height: 50px;
+  color: black;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
 
 .dropDownLinks {
   padding-bottom: 10px;
