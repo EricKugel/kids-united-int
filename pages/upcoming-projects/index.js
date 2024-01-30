@@ -68,21 +68,14 @@ const UpcomingProjects = () => {
         </div>
       </div>
 
-      <div
+      {/* <div
         className={styles.header}
         style={{
           marginTop: "50px",
         }}
       >
         Upcoming Projects
-      </div>
-
-      <div className={styles.infoWrapper}>
-        <div className={styles.infoHeader}>Fundraising for Erekle Jokhadze</div>
-        <div className={styles.info}>
-          Kids United International will be fundraising for Erekle Jokhadze, a medical student in Tbilisi, Georgia. Unfortunately, Jokhadze lacks the appropriate funding to continue paying for his tuition at Geomedi University – $1200 short. Below, there are two pictures of Jokhadze, as well as a personally crafted letter of his in English providing some background into his life. If you have the means, we encourage you to donate. All funds go to help Jokhadze stay in school. Every donation counts!
-        </div>
-      </div>
+      </div> */}
 
       <div className={styles.gallery}>
         <Link href="/Erekle/0.png">
@@ -93,8 +86,14 @@ const UpcomingProjects = () => {
         </Link>
       </div>
 
+      <div className={styles.infoWrapper}>
+        <div className={styles.infoHeader}>Fundraising for Erekle Jokhadze</div>
+        <div className={styles.info}>Kids United International raised a total of $1251.78 through GoFundMe to support medical student Erekle Jokhadze. Jokhadze, living in Tbilisi, Georgia, lacked the appropriate funding to continue paying for his tuition at Geomedi University. Above are two pictures of Jokhadze, and below is as a personally crafted letter of his in English providing some background into his life.
+        </div>
+      </div>
+
       <div className={styles.letterWrapper}>
-          <p>Hello,</p>
+          <p style = {{"margin": 0}}>Hello,</p>
           <p style = {{"textIndent": "25px", "margin": 0}}>I am Erekle Jokhadze, 19 years old, 2nd year student. I was born and grew up in Ambrolauri, one of the cities of Georgia. From a young age, I wanted to provide some kind of help to people and be there for them when they were sick. That is why I decided to choose a medical university.</p>
           <p style = {{"textIndent": "25px", "margin": 0}}>I am enrolling in the 2nd year of the Faculty of Physical Medicine and Rehabilitation of the Geomed Training University. I am a winner in one of the famous youth educational projects in Georgia, called "Bookshelf". After winning this project, I won a prize and was in England for 2 weeks.</p>
           <p style = {{"textIndent": "25px", "margin": 0}}>I have been a big fan of sports since childhood and currently I am a beginner physiotherapist in one of the football clubs, "Lokomotivi" where I am paid 600 GEL.</p>
